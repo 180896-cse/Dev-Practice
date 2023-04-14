@@ -1,7 +1,15 @@
 .container{
     border: 2px solid red;
-   
+    margin-top: 10%;
 }
+
+
+.cont-head{
+    /* border: 2px solid red; */
+    margin: 20px;
+    text-decoration: underline;
+}
+
 
 .carousel-control-next{
    background-color: black;
@@ -9,6 +17,9 @@
 .carousel-control-prev{
     background-color: black;
 }
+
+
+
 
 
 .d-block{

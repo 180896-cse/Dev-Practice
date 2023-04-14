@@ -1,0 +1,17 @@
+.container{
+    border: 2px solid red;
+   
+}
+
+.carousel-control-next{
+   background-color: black;
+}
+.carousel-control-prev{
+    background-color: black;
+}
+
+
+.d-block{
+    height: 500px;
+    /* width: 50%; */
+}

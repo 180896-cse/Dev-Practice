@@ -1,12 +1,12 @@
 .container{
     border: 2px solid red;
-    margin-top: 10%;
+    margin-top: 01%;
 }
 
 
 .cont-head{
     /* border: 2px solid red; */
-    margin: 20px;
+    margin: 1px;
     text-decoration: underline;
 }
 

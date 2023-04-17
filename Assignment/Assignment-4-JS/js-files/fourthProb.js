@@ -4,14 +4,6 @@ let lgnBtn = document.getElementById("sbmtBtn");
 let rgstrBtn = document.getElementById("register-link");
 
 
-window.localStorage.setItem("qwert","het");
-window.localStorage.setItem("elemObj","teh");
-
-
-let newElem = window.localStorage.getItem("elemObj");
-
-
-
 
 //Login part code
 
@@ -46,6 +38,10 @@ rgstrBtn.addEventListener("click",()=>{
     if(employePass.value == "" || employeUname.value == ""){
         alert("Username/Password field cannot be blank!");
     }else{
+        if(employePass.value == " " || employeUname.value == " "){
+            alert("Username/Password field cannot be blank!");
+        }
+        else{
         if(localStorage.getItem(employeUname.value) != null){
             alert("Please try with other UserName");
         }
@@ -53,15 +49,16 @@ rgstrBtn.addEventListener("click",()=>{
         window.localStorage.setItem(employeUname.value,employePass.value);
         }
     }
+    }
 
 })
 
 
 
 
-
-
-
+// window.localStorage.setItem("qwert","het");
+// window.localStorage.setItem("elemObj","teh");
+// let newElem = window.localStorage.getItem("elemObj");
 // console.log(localStorage.length);
 
 

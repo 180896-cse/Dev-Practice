@@ -1,8 +1,8 @@
-//Arrray of Objects
+//Data
 let employeData = [
   {
     imageUrl:
-      "https://usuploads.s3.amazonaws.com/itlearn360/uploads/2018/12/dummy-profile-pic-300x300.jpg",
+      "https://cdn-icons-png.flaticon.com/512/2117/2117258.png",
     name: "Ram",
     desig: "Manger",
     project: "Project-1"
@@ -13,8 +13,18 @@ let employeData = [
     name: "Alex",
     desig: "Developer",
     project: "Project-2"
+  },
+  {
+    imageUrl:
+      "https://www.dgvaishnavcollege.edu.in/dgvaishnav-c/uploads/2021/01/dummy-profile-pic.jpg",
+    name: "Sam",
+    desig: "Developer",
+    project: "Project-2"
   }
+
 ];
+
+
 
 
 

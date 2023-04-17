@@ -10,13 +10,6 @@ window.localStorage.setItem("elemObj","teh");
 
 let newElem = window.localStorage.getItem("elemObj");
 
-console.log(localStorage.length);
-
-
-//getting all the elments from localstorage
-for(let i=0;i<localStorage.length;i++){
-    console.log(localStorage.key(i)+" "+localStorage.getItem(localStorage.key(i)));
-}
 
 
 
@@ -30,7 +23,12 @@ lgnBtn.addEventListener("click",()=>{
     else{
     if(localStorage.getItem(employeUname.value) != null){
         console.log("Username present in LocalStorage!");
+        if(employePass.value == localStorage.getItem(employeUname.value) ){
         window.location.replace("http://127.0.0.1:5500/Assignment/Assignment-3-JS/");
+    }
+    else{
+        alert("Invalid Password!");
+    }
     }
     else{
         alert("Please Register Username First!");
@@ -64,11 +62,19 @@ rgstrBtn.addEventListener("click",()=>{
 
 
 
-if(localStorage.getItem('elemObj') != null){
-    console.log("yes!")
-}
-else{
-    console.log("no!");
-}
+// console.log(localStorage.length);
+
+
+//getting all the elments from localstorage
+// for(let i=0;i<localStorage.length;i++){
+//     console.log(localStorage.key(i)+" "+localStorage.getItem(localStorage.key(i)));
+// }
+
+// if(localStorage.getItem('elemObj') != null){
+//     console.log("yes!")
+// }
+// else{
+//     console.log("no!");
+// }
 
 

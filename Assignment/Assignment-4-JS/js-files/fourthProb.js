@@ -22,7 +22,7 @@ for(let i=0;i<localStorage.length;i++){
 lgnBtn.addEventListener("click",()=>{
     console.log("LogIn Button Clicked!");
     if(localStorage.getItem(employeUname.value) != null){
-        console.log("yes!");
+        console.log("Username present in LoaclStorage!");
     }
     else{
         alert("Please Register Username First!");
@@ -34,13 +34,24 @@ lgnBtn.addEventListener("click",()=>{
 
 rgstrBtn.addEventListener("click",()=>{
     console.log("Register Button Clicked!");
-    if(employePass.value == ""){
-        alert("Please Provide Password");
+    if(employePass.value == "" || employeUname.value == ""){
+        alert("Username/Password field cannot be blank!");
     }else{
-        console.log("the value of password block is not null");
+        if(localStorage.getItem(employeUname.value) != null){
+            alert("Please try with other UserName");
+        }
+        else{
+        window.localStorage.setItem(employeUname.value,employePass.value);
+        }
     }
 
 })
+
+
+
+
+
+
 
 if(localStorage.getItem('elemObj') != null){
     console.log("yes!")

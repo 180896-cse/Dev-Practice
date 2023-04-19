@@ -9,7 +9,7 @@ let rgstrBtn = document.getElementById("register-link");
 
 lgnBtn.addEventListener("click",()=>{
     console.log("LogIn Button Clicked!");
-    if(employePass.value == "" || employeUname.value == ""){
+    if(employePass.value.length == 0 || employeUname.value.length == 0){
         alert("Username/Password field cannot be blank!");
     }
     else{
@@ -35,20 +35,16 @@ lgnBtn.addEventListener("click",()=>{
 
 rgstrBtn.addEventListener("click",()=>{
     console.log("Register Button Clicked!");
-    if(employePass.value == "" || employeUname.value == ""){
+    if(employePass.value.length == 0 || employeUname.value.length == 0){
         alert("Username/Password field cannot be blank!");
-    }else{
-        if(employePass.value == " " || employeUname.value == " "){
-            alert("Username/Password field cannot be blank!");
-        }
-        else{
+    }else{      
         if(localStorage.getItem(employeUname.value) != null){
-            alert("Please try with other UserName");
+            alert("UserName Already Registered");
         }
         else{
         window.localStorage.setItem(employeUname.value,employePass.value);
         }
-    }
+  
     }
 
 })
